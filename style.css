@@ -39,7 +39,9 @@
     margin: 0;
 }
 
-html {
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -49,7 +51,8 @@ body {
     background-color: var(--dark-bg);
     color: var(--text-light);
     line-height: 1.6;
-    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 h1, h2, h3, h4 {
@@ -69,17 +72,19 @@ a {
 }
 
 img {
-    max-width: 100%;       /* fill container */
-    height: auto;          /* maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
     display: block;
-    border-radius: 50%;    /* make it perfectly circular */
-    object-fit: cover;     /* crop excess whitespace */
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* ==================== REUSABLE CSS CLASSES ==================== */
 .section {
     padding: 1.5rem 0 0.5rem;
     background-color: var(--dark-bg);
+    width: 100%;
+    overflow: hidden;
 }
 
 .section-title {
@@ -119,7 +124,8 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
-    padding-right: 1em;
+    padding-right: 1rem;
+    width: 100%;
 }
 
 .grid {
@@ -139,6 +145,7 @@ img {
     transition: all var(--transition-fast);
     cursor: pointer;
     border: none;
+    max-width: 100%;
 }
 
 .button-primary {
@@ -200,6 +207,10 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
 }
 
 .nav-logo {
@@ -265,12 +276,14 @@ img {
     color: var(--text-light);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .home-container {
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
     gap: 4rem;
+    width: 100%;
 }
 
 .home-content h1 {
@@ -322,6 +335,7 @@ img {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    width: 100%;
 }
 
 .home-image img {
@@ -344,7 +358,7 @@ img {
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
     gap: 4rem;
-    
+    width: 100%;
 }
 
 .about-text p {
@@ -355,6 +369,7 @@ img {
 .about-cards {
     display: grid;
     gap: 1rem;
+    width: 100%;
 }
 
 .about-card {
@@ -367,6 +382,7 @@ img {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     border: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .about-card:hover {
@@ -402,6 +418,7 @@ img {
 .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
+    width: 100%;
 }
 
 .skill-card {
@@ -412,6 +429,7 @@ img {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     border: 1px solid var(--border-color);
+    width: 100%;
 }
 .skill-card:hover {
     transform: translateY(-5px);
@@ -449,7 +467,8 @@ img {
 
 /* ==================== WORK EXPERIENCE ==================== */
 .experience-container {
-    max-width: 90%;
+    max-width: 95%;
+    width: 100%;
 }
 
 .experience-card {
@@ -459,6 +478,7 @@ img {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     border: 1px solid var(--border-color);
+    width: 100%;
 }
 .experience-card:hover {
     transform: translateY(-5px);
@@ -525,6 +545,7 @@ img {
 .projects-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
+    width: 100%;
 }
 
 .project-card {
@@ -534,6 +555,7 @@ img {
     overflow: hidden;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     border: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .project-card:hover {
@@ -546,8 +568,8 @@ img {
     height: 220px;
     object-fit: cover;
     object-position: center;
-    border-radius: 0; /* Removes oval edges */
-    display: block; /* Prevents inline spacing */
+    border-radius: 0;
+    display: block;
 }
 
 .project-card:hover img {
@@ -614,6 +636,7 @@ img {
     grid-template-columns: 1.2fr 1fr;
     gap: 4rem;
     align-items: flex-start;
+    width: 100%;
 }
 
 .contact-info h3 {
@@ -629,6 +652,7 @@ img {
 .contact-details {
     display: grid;
     gap: 1.8rem;
+    width: 100%;
 }
 
 .contact-detail-item {
@@ -667,11 +691,13 @@ img {
     border-radius: 0.75rem;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .form-group {
     display: grid;
     gap: 0.6rem;
+    width: 100%;
 }
 
 .form-group label {
@@ -691,6 +717,7 @@ img {
     color: var(--text-light);
     background-color: var(--dark-bg);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    max-width: 100%;
 }
 
 .form-group input:focus,
@@ -716,6 +743,7 @@ img {
     padding: 3rem 0;
     text-align: center;
     border-top: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .footer-container p {
@@ -782,20 +810,21 @@ img {
         margin-bottom: var(--mb-2);
     }
     
-    /* Mobile Nav Menu - FIXED: Starts completely hidden */
+    /* Mobile Nav Menu - Fixed for horizontal scrolling */
     .nav-menu {
         position: fixed;
         top: -100%;
         right: 0;
-        width: 80%;
+        width: 100%;
+        max-width: 100%;
         background-color: rgba(15, 15, 26, 0.98);
         backdrop-filter: blur(15px);
-        padding: 0rem 0 2rem;
+        padding: 2rem 0 2rem;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         border-radius: 0 0 1.5rem 1.5rem;
         transition: top 0.4s ease-in-out;
         z-index: var(--z-fixed);
-        height: calc(70vh - var(--header-height));
+        height: auto;
         overflow-y: auto;
         opacity: 0;
         visibility: hidden;
@@ -806,6 +835,7 @@ img {
         align-items: center;
         gap: 2.5rem;
         padding: 0 1.5rem;
+        width: 100%;
     }
     
     .nav-toggle {
@@ -822,62 +852,105 @@ img {
         visibility: visible;
     }
 
-    /* Stacking columns */
+    /* Stacking columns and fixing widths */
     .home-container,
     .about-container,
     .contact-container {
         grid-template-columns: 1fr;
+        width: 100%;
+        gap: 2.5rem;
     }
+    
     .home {
         padding-top: 8rem;
         padding-bottom: 3rem;
     }
-    .home-container {
-        gap: 2.5rem;
-    }
+    
     .home-content {
         order: 2;
         text-align: center;
+        width: 100%;
+        padding: 0 1rem;
     }
+    
     .home-image {
         order: 1;
         justify-self: center;
+        width: 100%;
     }
+    
     .home-image img {
         width: 260px;
         height: 260px;
     }
+    
     .home-social,
     .home-buttons {
         justify-content: center;
+        width: 100%;
     }
+    
     .home-buttons {
         flex-wrap: wrap;
     }
+    
     .about-container {
         gap: 2.5rem;
+        width: 90%;
     }
+    
     .skills-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 100%;
+        padding: 0 1rem;
     }
+    
     .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 2rem;
+        width: 100%;
+        padding: 0 1rem;
     }
+    
     .contact-container {
         gap: 2.5rem;
+        width: 100%;
     }
+    
     .contact-info {
         text-align: center;
+        width: 100%;
+        padding: 0 1rem;
     }
+    
     .contact-details {
         justify-content: center;
+        width: 100%;
     }
+    
     .contact-form {
         padding: 2rem;
+        width: 100%;
+        margin: 0 auto;
     }
+    
     .contact-form .button {
         justify-self: center;
+    }
+    
+    /* Ensure all cards fit within viewport */
+    .about-card, 
+    .skill-card, 
+    .experience-card, 
+    .project-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .experience-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 1rem;
     }
 }
 
@@ -885,45 +958,114 @@ img {
     .container {
         padding-left: 1rem;
         padding-right: 1rem;
+        width: 100%;
     }
+    
+    body {
+        position: relative;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
     .home-image img {
         width: 200px;
         height: 200px;
         border-width: 4px;
     }
+    
     .home-buttons {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
+    
     .button {
         width: 100%;
+        max-width: 280px;
         padding: 0.8rem 1.5rem;
     }
-    .about-card, .skill-card, .experience-card, .project-card, .contact-form {
+    
+    .about-card, 
+    .skill-card, 
+    .experience-card, 
+    .project-card, 
+    .contact-form {
         padding: 1.5rem;
+        width: 100%;
     }
+    
     .section-title {
         font-size: var(--h3-font-size);
+        padding: 0 1rem;
     }
+    
     .section-title::after {
         width: 50px;
         height: 3px;
     }
+    
     .experience-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+        width: 100%;
     }
+    
     .experience-header span {
         align-self: flex-end;
     }
+    
     .contact-detail-item {
         flex-direction: column;
         text-align: center;
         gap: 0.5rem;
+        width: 100%;
     }
+    
     .contact-detail-item i {
         font-size: 1.5rem;
         width: 40px;
         height: 40px;
+    }
+    
+    /* Fix for very small screens */
+    .home-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .home-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .nav {
+        padding: 0 1rem;
+    }
+}
+
+/* Additional safety measures for ultra-small screens */
+@media screen and (max-width: 380px) {
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .home-image img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .home-buttons .button {
+        max-width: 100%;
+    }
+    
+    .project-card,
+    .skill-card,
+    .about-card {
+        margin: 0;
+        border-radius: 0.5rem;
+    }
+    
+    .section {
+        padding: 5rem 0 2rem;
     }
 }
